@@ -33,21 +33,15 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Kopernicus">
       <HintPath>..\..\..\..\..\Documents\GitHub\Kopernicus\build\GameData\Kopernicus\Plugins\Kopernicus.dll</HintPath>
-    </Reference>
-    <Reference Include="Kopernicus.Components">
-      <HintPath>..\..\..\..\..\Documents\GitHub\Kopernicus\build\GameData\Kopernicus\Plugins\Kopernicus.Components.dll</HintPath>
-    </Reference>
-    <Reference Include="Kopernicus.Parser">
-      <HintPath>..\..\..\..\..\Documents\GitHub\Kopernicus\build\GameData\Kopernicus\Plugins\Kopernicus.Parser.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ModularFlightIntegrator">
       <HintPath>..\..\..\..\KSP STUFF\ModularFlightIntegrator.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +51,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
