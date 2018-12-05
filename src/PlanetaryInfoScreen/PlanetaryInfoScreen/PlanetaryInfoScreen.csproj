@@ -46,6 +46,9 @@
     <Reference Include="Kopernicus.Parser">
       <HintPath>..\..\..\..\..\Documents\GitHub\Kopernicus\build\GameData\Kopernicus\Plugins\Kopernicus.Parser.dll</HintPath>
     </Reference>
+    <Reference Include="ModularFlightIntegrator">
+      <HintPath>..\..\..\..\KSP STUFF\ModularFlightIntegrator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InfoBody.cs" />
     <Compile Include="PrintFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

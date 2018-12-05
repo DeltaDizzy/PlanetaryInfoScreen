@@ -1,43 +1,34 @@
 ﻿using KSP.IO;
 using System;
+using Kopernicus;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using Object = System.Object;
+using ModularFI;
+using Logger = Kopernicus.Logger;
 
 namespace PlanetaryInfoScreen
 {
     public class PrintFile : MonoBehaviour
     {
-        public static string PrintDir
-        {
-            get
-            {
-                return KSPUtil.ApplicationRootPath + "PluginData/" + typeof(PrintFile).Assembly.GetName().Name + "/";
-            }
-        }
-
-        //full path
-        TextWriter printStream = null;
-
         //print
-        public void Write(Object o)
+        public void Write()
         {
-            if (printStream == null)
-                return;
+            Logger.Default.SetFilename("Flux.log");
 
-            printStream.WriteLine("Information About" + InfoBody.bodyName);
-            printStream.WriteLine("======================================");
-            printStream.WriteLine("");
+            Logger.Default.Log("Information About Solar Flux");
+            //Print solarFlux to log
         }
 
-        public PrintFile([Optional] string fileName)
+        void Update()
         {
-            SetFilename(fileName);
-        }
-
-        public void SetFilename(string fileName)
-        {
-
+            if ((Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.V)) && FlightGlobals.ActiveVessel.directSunlight)
+            {
+                ScreenMessages.PostScreenMessage("Solar Flux for " + FlightGlobals.ActiveVessel.GetCurrentOrbit().referenceBody + "is " + ModularFlightIntegrator.ActiveVesselFI.solarFlux + " Watts/m^2");
+            }
+            else
+            {
+                ScreenMessages.PostScreenMessage("You are not in direct Sunlight!  Plase wait until day to measure again.");
+            }
         }
     }
 }
